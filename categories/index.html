@@ -5,19 +5,16 @@
   
 
   
-  <title>github博客绑定域名 | Hexo</title>
+  <title>categories | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前提相信能到这一步的人基本上都已经可以搭建hexo + github博客了，我也是跟着别人的教程完成的，但是完成的过程当中，遇到了该博客描述github绑定域名部分不是很清楚的问题，所以自己就写个博客来记录一下，后期也会写一篇帖子来记录自己搭建博客的过程以及遇到的坑的。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="github博客绑定域名">
-<meta property="og:url" content="http://yoursite.com/2017/09/10/github博客绑定域名/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前提相信能到这一步的人基本上都已经可以搭建hexo + github博客了，我也是跟着别人的教程完成的，但是完成的过程当中，遇到了该博客描述github绑定域名部分不是很清楚的问题，所以自己就写个博客来记录一下，后期也会写一篇帖子来记录自己搭建博客的过程以及遇到的坑的。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-03-22T07:23:40.786Z">
+<meta property="og:updated_time" content="2018-03-22T07:23:40.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="github博客绑定域名">
-<meta name="twitter:description" content="前提相信能到这一步的人基本上都已经可以搭建hexo + github博客了，我也是跟着别人的教程完成的，但是完成的过程当中，遇到了该博客描述github绑定域名部分不是很清楚的问题，所以自己就写个博客来记录一下，后期也会写一篇帖子来记录自己搭建博客的过程以及遇到的坑的。">
+<meta name="twitter:title" content="categories">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,16 +61,12 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-github博客绑定域名" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/09/10/github博客绑定域名/" class="article-date">
-  <time datetime="2017-09-10T04:34:45.000Z" itemprop="datePublished">2017-09-10</time>
+    <a href="/categories/index.html" class="article-date">
+  <time datetime="2017-09-10T07:25:11.000Z" itemprop="datePublished">2017-09-10</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/杂文/">杂文</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -82,7 +75,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      github博客绑定域名
+      categories
     </h1>
   
 
@@ -90,65 +83,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>相信能到这一步的人基本上都已经可以搭建hexo + github博客了，我也是跟着别人的教程完成的，但是完成的过程当中，遇到了该博客描述github绑定域名部分不是很清楚的问题，所以自己就写个博客来记录一下，后期也会写一篇帖子来记录自己搭建博客的过程以及遇到的坑的。<a id="more"></a></p>
-<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>废话不多说，直接进入主题：</p>
-<ol>
-<li>去域名提供商（这里默认你已经有一个域名了，不会的请去阿里云或者其他地方先注册一个），我这里就以我自己的阿里云域名为例：<ul>
-<li>找到域名，然后点击“解析”</li>
-<li>记录类型选择CNAME方式，注意不要选择A记录（A记录是指向的IP）</li>
-<li>然后修改主机记录<ul>
-<li>格式：你的github名称</li>
-<li>比如我的是dujunily</li>
-<li>备注：这是我们自定义的二级域名（没有试过保存为其他的）</li>
-</ul>
-</li>
-<li>最后修改记录值<ul>
-<li>修改格式为：你的github名称.github.io </li>
-<li>比如我的是：dujunily.github.io </li>
-</ul>
-</li>
-<li>点击保存要不了10分钟就解析成功了,一般会立即生效,好像1分钟就会生效，还会收到邮件提醒</li>
-</ul>
-</li>
-<li>在主项目里新建一个文件CNAME，没有后缀哦，然后在里面写上自己需要绑定的域名<ul>
-<li>格式为：【自定义的名称.详细域名】</li>
-<li>示例为： dujunily.luckydu.com</li>
-<li>备注不要www哦，dujunily这是一个二级域名</li>
-</ul>
-</li>
-<li>访问域名<ul>
-<li>通过 “你的github名称.你的主域名” </li>
-<li>比如我的 dujunily.luckydu.com 就可以访问我们自己的主页了。</li>
-<li>备注：如果你访问的是github的地址(比如：<a href="http://dujunily.github.io/" target="_blank" rel="noopener">http://dujunily.github.io/</a> )，那么也会跳转到你刚刚绑定的域名地址。 </li>
-</ul>
-</li>
-</ol>
-<p>文章参考：<br><a href="http://blog.csdn.net/tyro_java/article/details/51348477" title="文章参考" target="_blank" rel="noopener">http://blog.csdn.net/tyro_java/article/details/51348477</a></p>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/10/github博客绑定域名/" data-id="cjk3nkoft0003g8gflq1jx19k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/categories/index.html" data-id="cjk3nkofs0002g8gfgvzudna9" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2017/09/20/hexo-github部署个人网站最佳实践/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          hexo+github部署个人网站最佳实践
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
   
 </article>
 
