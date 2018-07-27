@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[不可变对象]]></title>
+    <url>%2F2018%2F03%2F22%2F%E4%B8%8D%E5%8F%AF%E5%8F%98%E9%87%8F%2F</url>
+    <content type="text"><![CDATA[str是不变对象，而list是可变对象。 对于可变对象，比如list，对list进行操作，list内部的内容是会变化的，比如： &gt;&gt;&gt; a = [&apos;c&apos;, &apos;b&apos;, &apos;a&apos;] &gt;&gt;&gt; a.sort() &gt;&gt;&gt; a [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;] 而对于不可变对象，比如str，对str进行操作呢： &gt;&gt;&gt; a = &apos;abc&apos; &gt;&gt;&gt; a.replace(&apos;a&apos;, &apos;A&apos;) &apos;Abc&apos; &gt;&gt;&gt; a &apos;abc&apos; 虽然字符串有个replace()方法，也确实变出了&#39;Abc&#39;，但变量a最后仍是&#39;abc&#39;，应该怎么理解呢？ 我们先把代码改成下面这样： &gt;&gt;&gt; a = &apos;abc&apos; &gt;&gt;&gt; b = a.replace(&apos;a&apos;, &apos;A&apos;) &gt;&gt;&gt; b &apos;Abc&apos; &gt;&gt;&gt; a &apos;abc&apos; 要始终牢记的是，a是变量，而&#39;abc&#39;才是字符串对象！有些时候，我们经常说，对象a的内容是&#39;abc&#39;，但其实是指，a本身是一个变量，它指向的对象的内容才是&#39;abc&#39;： 当我们调用a.replace(&#39;a&#39;, &#39;A&#39;)时，实际上调用方法replace是作用在字符串对象&#39;abc&#39;上的，而这个方法虽然名字叫replace，但却没有改变字符串&#39;abc&#39;的内容。相反，replace方法创建了一个新字符串&#39;Abc&#39;并返回，如果我们用变量b指向该新字符串，就容易理解了，变量a仍指向原有的字符串&#39;abc&#39;，但变量b却指向新字符串&#39;Abc&#39;了： 所以，对于不变对象来说，调用对象自身的任意方法，也不会改变该对象自身的内容。相反，这些方法会创建新的对象并返回，这样，就保证了不可变对象本身永远是不可变的。]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo+github部署个人网站最佳实践]]></title>
+    <url>%2F2017%2F09%2F20%2Fhexo-github%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%2F</url>
+    <content type="text"><![CDATA[暂时先不添加内容更新一点东西换一台电脑继续更新 参考链接：https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/ https://crazymilk.github.io/]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[github博客绑定域名]]></title>
+    <url>%2F2017%2F09%2F10%2Fgithub%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D%2F</url>
+    <content type="text"><![CDATA[前提相信能到这一步的人基本上都已经可以搭建hexo + github博客了，我也是跟着别人的教程完成的，但是完成的过程当中，遇到了该博客描述github绑定域名部分不是很清楚的问题，所以自己就写个博客来记录一下，后期也会写一篇帖子来记录自己搭建博客的过程以及遇到的坑的。 主题废话不多说，直接进入主题： 去域名提供商（这里默认你已经有一个域名了，不会的请去阿里云或者其他地方先注册一个），我这里就以我自己的阿里云域名为例： 找到域名，然后点击“解析” 记录类型选择CNAME方式，注意不要选择A记录（A记录是指向的IP） 然后修改主机记录 格式：你的github名称 比如我的是dujunily 备注：这是我们自定义的二级域名（没有试过保存为其他的） 最后修改记录值 修改格式为：你的github名称.github.io 比如我的是：dujunily.github.io 点击保存要不了10分钟就解析成功了,一般会立即生效,好像1分钟就会生效，还会收到邮件提醒 在主项目里新建一个文件CNAME，没有后缀哦，然后在里面写上自己需要绑定的域名 格式为：【自定义的名称.详细域名】 示例为： dujunily.luckydu.com 备注不要www哦，dujunily这是一个二级域名 访问域名 通过 “你的github名称.你的主域名” 比如我的 dujunily.luckydu.com 就可以访问我们自己的主页了。 备注：如果你访问的是github的地址(比如：http://dujunily.github.io/ )，那么也会跳转到你刚刚绑定的域名地址。 文章参考：http://blog.csdn.net/tyro_java/article/details/51348477]]></content>
+      <categories>
+        <category>杂文</category>
+      </categories>
+  </entry>
+</search>
