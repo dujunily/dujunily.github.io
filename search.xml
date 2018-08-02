@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用ButterKnife8以上版本，控件报空指针的问题]]></title>
+    <url>%2F2018%2F08%2F02%2F1%2F</url>
+    <content type="text"><![CDATA[butterknife8以上的版本（我这里用的是8.5.1） 在导入了compile &#39;com.jakewharton:butterknife:8.5.1&#39; 之后再导入annotationProcessor &#39;com.jakewharton:butterknife-compiler:8.5.1&#39;即可。]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[layout_marginStart与layout_marginLeft的区别]]></title>
     <url>%2F2018%2F07%2F27%2Flayout_marginStart%E4%B8%8Elayout_marginLeft%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
     <content type="text"><![CDATA[首先说一下阅读方式，是有两种的：从左到右（left-to-right，即LTR）和从右到左（right-to-left，即RTL）。 简单来说，对于LTR，start、end等同于left、right；而对于RTL，则相反。 为了使用RTL布局，需要实现以下两点： 在AndroidManifest中声明支持RTL布局： 在 元素下添加android:supportsRtl=”true”声明。 在App中用start、end来替代left、right： 如果用4.2及以上编译（ targetSdkVersion或者minSdkVersion大于等于17），则start、end来替代left、right，例如：android:paddingLeft 应改为android:paddingStart如果用4.2以下编译（ targetSdkVersion或者minSdkVersion小于等于16），两者都必须使用， 例如：需要同时使用android:paddingLeft 和android:paddingStartAndroid4.2也引入了一些新的API来控制LTR和RTL模式，如： android:layoutDirection android:textDirection android:textAlignment]]></content>
