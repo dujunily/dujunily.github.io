@@ -4,6 +4,12 @@
     <title><![CDATA[使用ButterKnife8以上版本，控件报空指针的问题]]></title>
     <url>%2F2018%2F08%2F02%2F1%2F</url>
     <content type="text"><![CDATA[butterknife8以上的版本（我这里用的是8.5.1） 在导入了compile &#39;com.jakewharton:butterknife:8.5.1&#39; 之后再导入annotationProcessor &#39;com.jakewharton:butterknife-compiler:8.5.1&#39;即可。]]></content>
+      <categories>
+        <category>android</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[layout_marginStart与layout_marginLeft的区别]]></title>
