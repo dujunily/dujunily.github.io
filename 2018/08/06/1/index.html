@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="秋天">
 <meta property="og:description" content="app编译时候失败提示： :app:transformNativeLibsWithStripDebugSymbolFor_360Debug Unable to strip library &amp;apos;……\app\build\intermediates\transforms\mergeJniLibs\_360\debug\folders\2000\1f\main\lib\armeabi\libsg">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-07T02:29:22.066Z">
+<meta property="og:updated_time" content="2018-08-07T03:14:01.528Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="unable to strip library packaging it as is">
 <meta name="twitter:description" content="app编译时候失败提示： :app:transformNativeLibsWithStripDebugSymbolFor_360Debug Unable to strip library &amp;apos;……\app\build\intermediates\transforms\mergeJniLibs\_360\debug\folders\2000\1f\main\lib\armeabi\libsg">
@@ -434,7 +434,7 @@ BUILD FAILED in 56s`
 </code></pre><p>解决办法：</p>
 <p><code>1. Remove everything from directory [android-sdk]\ndk-bundle\ or uninstall Android NDK in Android Studio\Sdk tools (see on the image above)</code></p>
 <p><code>2. Close Android Studio (AS).</code></p>
-<p><code>3. Download (in my case) NDK version 16b from https://developer.android.com/ndk/downloads/older_releases</code></p>
+<p><code>3. Download (in my case) NDK version 16b from</code> <a href="https://developer.android.com/ndk/downloads/older_releases" title="https://developer.android.com/ndk/downloads/older_releases" target="_blank" rel="noopener">https://developer.android.com/ndk/downloads/older_releases</a></p>
 <p><code>4. Extract archive (10 directories and 8 files or so) to [android-sdk]\ndk-bundle\</code></p>
 <p><code>5. Start AS and perform full refresh: Build Refresh Linked C++ projects and Build Rebuild project.</code></p>
 <p>参考：</p>
