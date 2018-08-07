@@ -310,6 +310,186 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/06/1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="秋天">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="秋天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/06/1/" itemprop="url">unable to strip library packaging it as is</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-06T17:42:27+08:00">
+                2018-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NDK/" itemprop="url" rel="index">
+                    <span itemprop="name">NDK</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/06/1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/08/06/1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>app编译时候失败提示：</p>
+<pre><code>:app:transformNativeLibsWithStripDebugSymbolFor_360Debug
+Unable to strip library &apos;……\app\build\intermediates\transforms\mergeJniLibs\_360\debug\folders\2000\1f\main\lib\armeabi\libsgmain.so&apos;, packaging it as is.
+:app:transformNativeLibsWithStripDebugSymbolFor_360Debug FAILED
+
+`FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task &apos;:app:transformNativeLibsWithStripDebugSymbolFor_360Debug&apos;.
+&gt; A problem occurred starting process &apos;command &apos;C:\android\sdk\ndk-bundle\toolchains\mips64el-linux-android-4.9\prebuilt\windows-x86_64\bin\mips64el-linux-android-strip&apos;&apos;
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 56s`
+</code></pre><p>一直在<code>google</code>搜索<code>unable to strip library packaging it as is</code>苦苦无果，最终在<code>stackoverflow</code>找到原因以及解决办法：</p>
+<p>原因：</p>
+<pre><code>NDK版本是17
+</code></pre><p>解决办法：</p>
+<p><code>1. Remove everything from directory [android-sdk]\ndk-bundle\ or uninstall Android NDK in Android Studio\Sdk tools (see on the image above)</code></p>
+<p><code>2. Close Android Studio (AS).</code></p>
+<p><code>3. Download (in my case) NDK version 16b from https://developer.android.com/ndk/downloads/older_releases</code></p>
+<p><code>4. Extract archive (10 directories and 8 files or so) to [android-sdk]\ndk-bundle\</code></p>
+<p><code>5. Start AS and perform full refresh: Build Refresh Linked C++ projects and Build Rebuild project.</code></p>
+<p>参考：</p>
+<p><a href="https://stackoverflow.com/questions/50253566/after-using-android-studio-3-1-2-it-showing-error-2-no-such-file-or-directory/50270450#50270450" title="unable to strip library packaging it as is" target="_blank" rel="noopener">unable to strip library packaging it as is</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/02/1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1139,7 +1319,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1150,7 +1330,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
